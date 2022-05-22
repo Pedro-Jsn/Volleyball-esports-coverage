@@ -1,0 +1,135 @@
+main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+main .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  min-height: calc(100vh - 8vh);
+  background-color: var(--main-color);
+  box-shadow: 0 0 2px rgb(0 0 0 / 22%);
+}
+
+main .container .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 100%;
+}
+
+.head-form{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.head-form img{
+  width: 100%;
+}
+
+.form-title{
+  font-size: 24px;
+  color: var(--text-color);
+  line-height: 1.2;
+  font-weight: 900;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.wrap-input100 {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 16px;
+}
+
+.input100 {
+  font-size: 15px;
+  line-height: 1.2;
+  color: #333333;
+  border: none;
+  display: block;
+  width: 100%;
+  background: var(--text-color);
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px 0 53px;
+}
+
+.symbol-input100 {
+  font-size: 15px;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 30px;
+  pointer-events: none;
+
+  transition: all 0.4s;
+}
+
+
+.input100:focus + .symbol-input100 {
+  color: #030A8C;
+  padding-left: 23px;
+}
+
+.container-login100-form-btn {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.login100-form-btn {
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--text-color);
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background: var(--card-color);
+  box-shadow: 0 0 2px rgb(0 0 0 / 40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.login100-form-btn:hover {
+  background: #030A8C;
+  color: #fff;
+}
+
+.text-center{
+  margin-top: 25px;
+}
+
+.text-center a{
+  color: var(--text-color);
+}
