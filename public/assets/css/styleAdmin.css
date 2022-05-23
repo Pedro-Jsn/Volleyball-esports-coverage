@@ -1,0 +1,152 @@
+main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+main .container{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  min-height: calc(100vh - 8vh);
+  height: 100%;
+  background-color: var(--main-color);
+  box-shadow: 0 0 2px rgb(0 0 0 / 22%);
+}
+
+main .container .content{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--card-color);
+  border-bottom: 1px solid var(--destaque-color);
+  box-shadow: 0 0 2px rgb(0 0 0 / 40%);
+}
+
+main .container .content .infos-perfil{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 60%;
+  margin-left: 40px;
+}
+
+main .container .content .infos-perfil .nome{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+main .container .content-2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 6vh;
+  background-color: var(--card-color);
+  box-shadow: 0 0 2px rgb(0 0 0 / 40%);
+} 
+
+main .container .content-2 .option{
+  width: 8%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid var(--destaque-color);
+  border-right: 1px solid var(--destaque-color);
+  margin-left: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.active{
+  background-color: var(--destaque-color);
+  color: #000;
+}
+
+main .container-time{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+}
+
+main .container-time .title{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+main .container-time .form-time{
+  margin-top: 20px;
+  width: 30%;
+}
+
+main .container-time .form-time .nome-time{
+  margin-bottom: 15px;
+}
+
+main .container-time .form-time label{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+main .container-time .form-time input{
+  border: none;
+  height: 25px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  padding: 0px 0px 0px 5px;
+}
+
+.container-login100-form-btn {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.login100-form-btn {
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--text-color);
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background: var(--card-color);
+  box-shadow: 0 0 2px rgb(0 0 0 / 40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.login100-form-btn:hover {
+  background: #030A8C;
+  color: #fff;
+}
+
+main .container-partida{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+}
+

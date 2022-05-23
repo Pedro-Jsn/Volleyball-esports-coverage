@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin / VEC</title>
+  <link rel="icon" href="../assets/img/bola-de-voleibol-1.png">
+  <link rel="stylesheet" href="../assets/css/styleHeader.css">
+  <link rel="stylesheet" href="../assets/css/styleAdmin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="../assets/js/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="menu">
+      <div class="logo">
+        <img src="../assets/img/teste.png" alt="">
+      </div>
+      <div class="div-lista">
+        <ul class="menu-lista">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../times.html">Times</a></li>
+          <li><a href="../partidas.html">Partidas</a></li>
+        </ul>
+      </div>
+      <div class="menu-options">
+        <div class="night" onclick="noturno()">
+          <div class="night-logo">
+            <i class="fa-regular fa-moon"></i>
+            <span>Noturno:</span>
+          </div>
+          <span id="night_text" class="night-text">ON</span>
+        </div>
+        <div class="login">
+          <div class="sign-in">
+            <a href="login.html"><span class="text">Logar</span></a>
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="content">
+        <div class="infos-perfil">
+          <div class="nome">Olá, administrador!</div>
+        </div>
+      </div>
+      <div class="content-2">
+        <div class="option active">
+          <span>Time</span>
+        </div>
+        <div class="option">
+          <span>Partida</span>
+        </div>
+        <div class="option">
+          <span>Premiação</span>
+        </div>
+      </div>
+
+      <div class="container-time" style="display: none;">
+        <div class="title">
+          Cadastre o seu time aqui!
+        </div>
+
+        <div class="form-time">
+          <div class="nome-time">
+            <label>Nome do time:</label>
+            <input type="text">
+            <br>
+            <label>Sigla do time:</label>
+            <input type="text">
+          </div>
+          <div class="jogadores">
+            <label>Nome do 1°Jogador:</label>
+            <input type="text">
+            <label>Nome do 2°Jogador:</label>
+            <input type="text">
+            <label>Nome do 3°Jogador:</label>
+            <input type="text">
+            <label>Nome do 4°Jogador:</label>
+            <input type="text">
+            <label>Nome do 5°Jogador:</label>
+            <input type="text">
+          </div>
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn">
+              Cadastrar
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container-time" >
+        <div class="title">
+          Cadastre uma partida aqui!
+        </div>
+
+        <div class="form-time">
+          <div class="nome-time">
+            <label>Nome do time:</label>
+            <input type="text">
+            <br>
+            <label>Sigla do time:</label>
+            <input type="text">
+          </div>
+          
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn">
+              Cadastrar
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

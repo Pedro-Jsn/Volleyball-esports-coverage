@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil / VEC</title>
+    <link rel="icon" href="../assets/img/bola-de-voleibol-1.png">
+    <link rel="stylesheet" href="../assets/css/styleHeader.css">
+    <link rel="stylesheet" href="../assets/css/stylePerfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../assets/js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="logo">
+                <img src="../assets/img/teste.png" alt="">
+            </div>
+            <div class="div-lista">
+                <ul class="menu-lista">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../times.html">Times</a></li>
+                    <li><a href="../partidas.html">Partidas</a></li>
+                </ul>
+            </div>
+            <div class="menu-options">
+                <div class="night" onclick="noturno()">
+                    <div class="night-logo">
+                        <i class="fa-regular fa-moon"></i>
+                        <span>Noturno:</span>
+                    </div>
+                    <span id="night_text" class="night-text">ON</span>
+                </div>
+                <div class="login">
+                    <div class="sign-in">
+                        <a href="login.html"><span class="text">Logar</span></a>
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+      <div class="container">
+          <div class="content">
+            <div class="infos-perfil">
+              <div class="nome">Pedro Henrique</div>
+              <div class="post">
+                <i>Posts:</i>
+                <span>0</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-post">
+            <div class="wrap-input100">
+              <label>Titulo</label>
+              <input class="input100" type="text" placeholder="Titulo: ">
+            </div>
+            <div class="wrap-input100">
+              <label>Descrição</label>
+              <textarea class="textarea" name="desc" id="desc" cols="30" rows="10"></textarea>
+            </div>
+            <div class="container-login100-form-btn">
+              <button class="login100-form-btn">
+              Enviar post
+              </button>
+            </div>
+          </div>
+      </div>
+    </main>
+</body>
+</html>
