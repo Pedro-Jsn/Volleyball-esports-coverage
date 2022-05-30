@@ -22,3 +22,19 @@ function noturno(){
         document.getElementById("night_text").innerHTML = "OFF";
     }
 }
+
+const myImput = document.getElementById('ipt_number');
+
+function step(btn){
+    let id = btn.getAttribute('id');
+    let min = myImput.getAttribute('min');
+    let step = myImput.getAttribute('step');
+    let val = myImput.getAttribute('value');
+    let calcStep = (id == "mais") ? (step*1) : (step*-1);
+
+    let novoVal = parseInt(val) + calcStep;
+
+    if (novoVal >= min) {
+        myImput.setAttribute("value", novoVal);
+    }
+}

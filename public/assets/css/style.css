@@ -98,7 +98,7 @@ main .container .content .col-1 .col-posts .posts .card-post{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 12vh;
+    height: 100%;
     margin: auto;
     margin-bottom: 15px;
     background-color: var(--card-color);
@@ -188,4 +188,5 @@ main .container .content .col-1 .col-posts .posts .card-post{
     justify-content: center;
     align-items: center;
     border-right: 3.5px solid #28af98;
+    padding-right: 8px;
 }

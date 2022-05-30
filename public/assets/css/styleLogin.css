@@ -15,7 +15,7 @@ main .container{
   justify-content: center;
   align-items: center;
   width: 60%;
-  min-height: calc(100vh - 8vh);
+  min-height: calc(100vh - 69px);
   background-color: var(--main-color);
   box-shadow: 0 0 2px rgb(0 0 0 / 22%);
 }
