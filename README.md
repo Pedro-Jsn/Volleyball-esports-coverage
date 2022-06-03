@@ -28,7 +28,7 @@ Olá! Me chamo Pedro, tenho 18 anos e quando eu tinha 10 anos eu conheci o mundo
 
 ## :world_map: Screenshots
 
-![App Screenshot](https://i.imgur.com/Xpk2441.png)
+![App Screenshot](https://i.imgur.com/WqWIWob.png)
 
 
 ## :trophy: Feedback
