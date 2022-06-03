@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="../assets/js/script.js"></script>
 </head>
-<body>
+<body onload="validarSessao(), validaLogin()">
     <header>
         <div class="menu">
             <div class="logo">
@@ -33,10 +33,10 @@
                     <span id="night_text" class="night-text">ON</span>
                 </div>
                 <div class="login">
-                    <div class="sign-in">
-                        <a href="login.html"><span class="text">Logar</span></a>
-                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                    </div>
+                  <div id="sign-in" class="sign-in">
+                    <a href="login.html"><span class="text">Logar</span></a>
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                  </div>
                 </div>
             </div>
         </div>
@@ -46,24 +46,24 @@
       <div class="container">
           <div class="content">
             <div class="infos-perfil">
-              <div class="nome">Pedro Henrique</div>
+              <div id="nome" class="nome">Pedro Henrique</div>
               <div class="post">
                 <i>Posts:</i>
-                <span>0</span>
+                <span id="num_posts">0</span>
               </div>
             </div>
           </div>
           <div class="form-post">
             <div class="wrap-input100">
               <label>Titulo</label>
-              <input class="input100" type="text" placeholder="Titulo: ">
+              <input class="input100" id="ipt_titulo" type="text" placeholder="Titulo: ">
             </div>
             <div class="wrap-input100">
               <label>Descrição</label>
-              <textarea class="textarea" name="desc" id="desc" cols="30" rows="10"></textarea>
+              <textarea class="textarea" id="ipt_desc" name="desc" id="desc" cols="30" rows="10"></textarea>
             </div>
             <div class="container-login100-form-btn">
-              <button class="login100-form-btn">
+              <button onclick="cadastrarPost()" class="login100-form-btn">
               Enviar post
               </button>
             </div>
@@ -71,4 +71,7 @@
       </div>
     </main>
 </body>
+
+<script src="../assets/js/perfil.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

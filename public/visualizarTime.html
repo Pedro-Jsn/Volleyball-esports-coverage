@@ -12,9 +12,10 @@
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/script.js"></script>
 </head>
 
-<body>
+<body onload="validaLogin()">
   <header>
     <div class="menu">
       <div class="logo">
@@ -36,7 +37,7 @@
           <span id="night_text" class="night-text">ON</span>
         </div>
         <div class="login">
-          <div class="sign-in">
+          <div id="sign-in" class="sign-in">
             <a href="login.html"><span class="text">Logar</span></a>
             <i class="fa-solid fa-arrow-right-to-bracket"></i>
           </div>
@@ -248,7 +249,6 @@
 </body>
 
 </html>
-<script src="assets/js/script.js"></script>
 <script>
   const labels = [
     'January',

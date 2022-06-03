@@ -38,3 +38,22 @@ function step(btn){
         myImput.setAttribute("value", novoVal);
     }
 }
+
+function validaLogin(){
+    var sessao = document.getElementById("sign-in");
+    if (sessionStorage.ID_USUARIO == null) {
+        sessao.innerHTML = `
+        <a href="login.html"><span class="text">Logar</span></a>
+        <i class="fa-solid fa-arrow-right-to-bracket"></i>`;
+    }else{
+        sessao.innerHTML = `
+        <a href="./admin/perfil.html"><span class="text">Perfil</span></a>
+        <i class="fa-regular fa-user"></i>`;
+    }
+}
+
+function validarSessao(){
+    if (sessionStorage.ID_USUARIO == null) {
+        window.location.href = "login.html";
+    }
+}

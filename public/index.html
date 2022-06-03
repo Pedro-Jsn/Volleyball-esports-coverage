@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="assets/js/script.js"></script>
 </head>
-<body>
+<body onload="validaLogin(), carregarPosts()">
     <header>
         <div class="menu">
             <div class="logo">
@@ -33,7 +33,7 @@
                     <span id="night_text" class="night-text">ON</span>
                 </div>
                 <div class="login">
-                    <div class="sign-in">
+                    <div id="sign-in" class="sign-in">
                         <a href="login.html"><span class="text">Logar</span></a>
                         <i class="fa-solid fa-arrow-right-to-bracket"></i>
                     </div>
@@ -54,71 +54,11 @@
                     <div class="col-posts">
                         <div class="posts-titles">
                             <p>POSTS RECENTES</p>
-                            <a href="">Fazer um post--></a>
+                            <a href="admin/perfil.html">Fazer um post--></a>
                         </div>
 
-                        <div class="posts">
-                            <div class="card-post">
-                                <div class="title-card">
-                                    <span class="title">Titulo</span>
-                                    <p>Feito por: <span class="people">Nome da pessoa</span></p>
-                                </div>
-                                
-                                <div class="describe-card">
-                                    <p>lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo nostrum cum reprehenderit, dolore ad totam quod vero corrupti necessitatibus? Animi odit magnam esse. Unde amet pariatur, itaque omnis repellendus nulla.</p>
-                                </div>
-                            </div>
-                            <div class="card-post">
-                                <div class="title-card">
-                                    <span class="title">Titulo</span>
-                                    <p>Feito por: <span class="people">Nome da pessoa</span></p>
-                                </div>
-                                
-                                <div class="describe-card">
-                                    <p>lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo nostrum cum reprehenderit, dolore ad totam quod vero corrupti necessitatibus? Animi odit magnam esse. Unde amet pariatur, itaque omnis repellendus nulla.</p>
-                                </div>
-                            </div>
-                            <div class="card-post">
-                                <div class="title-card">
-                                    <span class="title">Titulo</span>
-                                    <p>Feito por: <span class="people">Nome da pessoa</span></p>
-                                </div>
-                                
-                                <div class="describe-card">
-                                    <p>lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo nostrum cum reprehenderit, dolore ad totam quod vero corrupti necessitatibus? Animi odit magnam esse. Unde amet pariatur, itaque omnis repellendus nulla.</p>
-                                </div>
-                            </div>
-                            <div class="card-post">
-                                <div class="title-card">
-                                    <span class="title">Titulo</span>
-                                    <p>Feito por: <span class="people">Nome da pessoa</span></p>
-                                </div>
-                                
-                                <div class="describe-card">
-                                    <p>lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo nostrum cum reprehenderit, dolore ad totam quod vero corrupti necessitatibus? Animi odit magnam esse. Unde amet pariatur, itaque omnis repellendus nulla.</p>
-                                </div>
-                            </div>
-                            <div class="card-post">
-                                <div class="title-card">
-                                    <span class="title">Titulo</span>
-                                    <p>Feito por: <span class="people">Nome da pessoa</span></p>
-                                </div>
-                                
-                                <div class="describe-card">
-                                    <p>lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo nostrum cum reprehenderit, dolore ad totam quod vero corrupti necessitatibus? Animi odit magnam esse. Unde amet pariatur, itaque omnis repellendus nulla.</p>
-                                </div>
-                            </div>
-                            <div class="card-post">
-                                <div class="title-card">
-                                    <span class="title">Titulo</span>
-                                    <p>Feito por: <span class="people">Nome da pessoa</span></p>
-                                </div>
-                                
-                                <div class="describe-card">
-                                    <p>lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo nostrum cum reprehenderit, dolore ad totam quod vero corrupti necessitatibus? Animi odit magnam esse. Unde amet pariatur, itaque omnis repellendus nulla.</p>
-                                </div>
-                            </div>
-                            
+                        <div id="div_posts" class="posts">
+                                         
                         </div>
                     </div>
                 </div>
@@ -317,6 +257,8 @@
     <footer>
 
     </footer>
+
+    <script src="assets/js/indexPost.js"></script>
 </body>
 
 </html>
