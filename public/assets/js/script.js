@@ -3,7 +3,7 @@ function noturno(){
 
     if (texto == "OFF") {
         document.body.style.setProperty('--main-color', '#2f3337');
-        document.body.style.setProperty('--background-color', '#2f3337');
+        document.body.style.setProperty('--background-color', '#292e32');
         document.body.style.setProperty('--text-color', '#c6c6c6');
         document.body.style.setProperty('--card-color', '#40474f');
         document.body.style.setProperty('--destaque-color', '#F2BB16');
@@ -23,19 +23,12 @@ function noturno(){
     }
 }
 
-const myImput = document.getElementById('ipt_number');
 
-function step(btn){
-    let id = btn.getAttribute('id');
-    let min = myImput.getAttribute('min');
-    let step = myImput.getAttribute('step');
-    let val = myImput.getAttribute('value');
-    let calcStep = (id == "mais") ? (step*1) : (step*-1);
-
-    let novoVal = parseInt(val) + calcStep;
-
-    if (novoVal >= min) {
-        myImput.setAttribute("value", novoVal);
+function validarSessao(){
+    if (sessionStorage.ID_USUARIO == null) {
+        window.location.href = "../login.html";
+    }else{
+        validaLogin();
     }
 }
 
@@ -52,8 +45,3 @@ function validaLogin(){
     }
 }
 
-function validarSessao(){
-    if (sessionStorage.ID_USUARIO == null) {
-        window.location.href = "login.html";
-    }
-}

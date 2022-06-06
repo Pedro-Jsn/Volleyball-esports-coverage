@@ -11,6 +11,10 @@ var app = express();
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
 var postRouter = require("./src/routes/posts");
+var partidasRouter = require("./src/routes/partidas");
+var timesRouter = require("./src/routes/times");
+var premiacaoRouter = require("./src/routes/premiacao");
+var historicoRouter = require("./src/routes/historico");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -21,6 +25,10 @@ app.use(cors());
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
 app.use("/posts", postRouter);
+app.use("/partidas", partidasRouter);
+app.use("/times", timesRouter);
+app.use("/premiacao", premiacaoRouter);
+app.use("/historico", historicoRouter);
 
 
 app.listen(PORTA, function () {

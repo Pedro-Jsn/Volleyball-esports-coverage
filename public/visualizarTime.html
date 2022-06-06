@@ -55,11 +55,11 @@
               <img src="assets/img/avatar.png" alt="">
             </div>
           </div>
-          <div class="infos-perfil-text">
+          <div id="infos-perfil-text" class="infos-perfil-text">
             <div>
               <div class="team-name">
-                <h1 class="title">Brasil</h1>
-                <h2 class="title tag">BRA</h2>
+                <h1 class="title"></h1>
+                <h2 class="title tag"></h2>
               </div>
             </div>
           </div>
@@ -71,86 +71,7 @@
             <p>EQUIPE ATUAL</p>
           </div>
 
-          <div class="col-equipe">
-            <div class="label">Jogadores</div>
-
-            <div style="display: flex; flex-wrap: wrap;">
-              <div class="jogador">
-                <div style="display: flex; align-items: center;">
-                  <div class="jogador-img">
-                    <img src="assets/img/time.png" alt="">
-                  </div>
-                  <div class="jogador-name">
-                    <div class="nome">
-                      PEDRO JESUINO
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="jogador">
-                <div style="display: flex; align-items: center;">
-                  <div class="jogador-img">
-                    <img src="assets/img/time.png" alt="">
-                  </div>
-                  <div class="jogador-name">
-                    <div class="nome">
-                      PEDRO JESUINO
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="jogador">
-                <div style="display: flex; align-items: center;">
-                  <div class="jogador-img">
-                    <img src="assets/img/time.png" alt="">
-                  </div>
-                  <div class="jogador-name">
-                    <div class="nome">
-                      PEDRO JESUINO
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="jogador">
-                <div style="display: flex; align-items: center;">
-                  <div class="jogador-img">
-                    <img src="assets/img/time.png" alt="">
-                  </div>
-                  <div class="jogador-name">
-                    <div class="nome">
-                      Pedro Jesuino
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="jogador">
-                <div style="display: flex; align-items: center;">
-                  <div class="jogador-img">
-                    <img src="assets/img/time.png" alt="">
-                  </div>
-                  <div class="jogador-name">
-                    <div class="nome">
-                      PEDRO JESUINO
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="label">Treinador</div>
-
-            <div class="jogador">
-              <div style="display: flex; align-items: center;">
-                <div class="jogador-img">
-                  <img src="assets/img/time.png" alt="">
-                </div>
-                <div class="jogador-name">
-                  <div class="nome">
-                    PEDRO JESUINO
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div id="col-equipe" class="col-equipe">    
           </div>
 
           <div class="equipe-titles">
@@ -160,25 +81,32 @@
           <div class="rating">
             <div style="padding: 20px;font-size: 11px;display: flex;">
               <div style="display: flex;align-items: center;margin-right: 20px;">
-                <div style="font-weight: 700;margin-top: -1px;">Visualizar</div>
-                <div class="rating-item">Partidas</div>
-                <div style="margin-left: 8px;" class="rating-item active">Premiações</div>
+                <div style="font-weight: 700;margin-top: -1px;">Visualizar:</div>
+                <div onclick="pontuacao()" id="rating" class="rating-item active">Rating</div>
+                <div onclick="posicao()" id="historico" style="margin-left: 8px;" class="rating-item">Histórico de ranking</div>
               </div>
             </div>
 
             <div>
-              <div class="grafico">
+              <div id="grafico_um" class="grafico active-grafico">
                 <div class="infos">
                   <div class="infos-jogos">
                     <div class="label">Jogos</div>
                     <div class="value">
-                      <span>10</span>
+                      <span id="qtd_partida1"></span>
+                    </div>
+                  </div>
+                  <div class="infos-jogos">
+                    <div class="label">Ranking atual</div>
+                    <div class="value" style="color: #9ccbe2; display: flex;">
+                      <span style="font-size: 40px; text-align: center;" id="raking_atual1"></span>
+                      <div style="font-size: 12px; margin-left: 3px; margin-right: 20px; font-weight: 500; padding-top: 4px;">Mundial</div>
                     </div>
                   </div>
                   <div class="infos-rating">
                     <div class="label">Rating</div>
                     <div class="value">
-                      <span>1280</span>
+                      <span id="pontuacao_atual"></span>
                     </div>
                   </div>
                 </div>
@@ -188,18 +116,25 @@
                 </div>
               </div>
 
-              <div class="grafico active-grafico">
+              <div id="grafico_dois" class="grafico">
                 <div class="infos">
                   <div class="infos-jogos">
                     <div class="label">Jogos</div>
                     <div class="value">
-                      <span>10</span>
+                      <span id="qtd_partida2"></span>
+                    </div>
+                  </div>
+                  <div class="infos-jogos">
+                    <div class="label">Ranking atual</div>
+                    <div class="value" style="color: #9ccbe2; display: flex;">
+                      <span style="font-size: 40px; text-align: center;" id="raking_atual2"></span>
+                      <div style="font-size: 12px; margin-left: 3px; margin-right: 20px; font-weight: 500; padding-top: 4px;">Mundial</div>
                     </div>
                   </div>
                   <div class="infos-rating">
-                    <div class="label">Premiação</div>
+                    <div class="label">Maior rating</div>
                     <div class="value">
-                      <span>R$220.000</span>
+                      <span id="maior_rating"></span>
                     </div>
                   </div>
                 </div>
@@ -219,7 +154,7 @@
           <div class="premiacoes">
             <div style="padding: 20px;">
               <div class="ganhos">Total ganho</div>
-              <span style="font-size: 22px;font-weight: 500;">R$128.000</span>
+              <span id="span_total_ganho" style="font-size: 22px;font-weight: 500;"></span>
             </div>
 
             <div class="pesquisa-ganhos" style="padding: 20px;">
@@ -234,7 +169,7 @@
                   <button id="mais" onclick="step(this)"> + </button>
                 </div>
                 <br>
-                <button class="btn-pesquisa btn-4">Pesquisar</button>
+                <button onclick="verPremiacao()" class="btn-pesquisa btn-4">Pesquisar</button>
                 <br>
                 <div id="div_msg">
                   
@@ -249,98 +184,5 @@
 </body>
 
 </html>
-<script>
-  const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-  ];
-
-  const data = {
-    labels: labels,
-    datasets: [{
-      label: 'Partida contra o Brasil',
-      display: false,
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: [65, 59, 80, 81, 56, 55, 40],
-      fill: 'start',
-      tension: 0 ? 0 : 0.4,
-    }]
-  };
-
-  const config = {
-    type: 'line',
-    title: 'Rating History',
-    data: data,
-    options: {
-      plugins: {
-        legend: {
-          display: false
-        },
-        title:{
-          display: true,
-          text: 'Partidas Jogadas',
-          position: 'bottom'
-        },
-        subtitle:{
-          display: true,
-          text: 'Rating History',
-          position: 'left'
-        },
-      },
-      scales:{
-        y:{
-          display: true,
-        },
-        x:{
-          display: false,
-        }
-      }
-    }
-  };
-
-  const config2 = {
-    type: 'line',
-    title: 'Rating History',
-    data: data,
-    options: {
-      plugins: {
-        legend: {
-          display: false
-        },
-        title:{
-          display: true,
-          text: 'Partidas Jogadas',
-          position: 'bottom'
-        },
-        subtitle:{
-          display: true,
-          text: 'Premiações history',
-          position: 'left'
-        },
-      },
-      scales:{
-        y:{
-          display: true,
-        },
-        x:{
-          display: false,
-        }
-      }
-    }
-  };
-
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );
-
-  const myChart2 = new Chart(
-    document.getElementById('myChart2'),
-    config2
-  );
-</script>
+<script src="assets/js/visualizarTime.js"></script>
+<script src="assets/js/graficoTime.js"></script>
