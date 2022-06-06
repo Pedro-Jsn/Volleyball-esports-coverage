@@ -1,7 +1,3 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-/* para workbench - local - desenvolvimento */
 CREATE DATABASE Vec;
 
 USE Vec;
@@ -27,6 +23,15 @@ CREATE TABLE Times(
     ,nome VARCHAR(30)
     ,sigla CHAR(3)
     ,treinador VARCHAR(30)
+    ,pontuacao INT
+);
+
+CREATE TABLE Historico(
+    idHistorico INT PRIMARY KEY AUTO_INCREMENT
+    ,pontuacao INT
+    ,momento DATETIME
+    ,fkTime INT
+    ,FOREIGN KEY (fkTime) REFERENCES Times(idTime)
 );
 
 CREATE TABLE Premiacao(
@@ -34,7 +39,6 @@ CREATE TABLE Premiacao(
     ,valor DECIMAL(7,2)
     ,fkTime INT
     ,momento DATETIME
-    ,pontuacao INT
     ,FOREIGN KEY (fkTime) REFERENCES Times(idTime)
 );
 
@@ -49,14 +53,8 @@ CREATE TABLE partida(
 	idPartida INT PRIMARY KEY AUTO_INCREMENT
     ,statusPartida VARCHAR(30)
     ,horario DATETIME
-);
-
-CREATE TABLE partidaTimes(
-	idPartidaTimes INT PRIMARY KEY AUTO_INCREMENT
-    ,fkPartida INT
     ,primeiroTime INT
     ,segundoTime INT
     ,FOREIGN KEY(primeiroTime)REFERENCES Times(idTime)
     ,FOREIGN KEY(segundoTime)REFERENCES Times(idTime)
-    ,FOREIGN KEY(fkPartida)REFERENCES partida(idPartida)
 );

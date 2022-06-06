@@ -152,9 +152,12 @@ function pontuacao(){
 }
 
 function posicao(){
-
   document.getElementById('grafico_dois').classList.add('active-grafico');
   document.getElementById('grafico_um').classList.remove('active-grafico');
   document.getElementById('rating').classList.remove('active');
   document.getElementById('historico').classList.add('active');
+
+  setTimeout(() => {
+    window.scrollTo(0, document.body.scrollHeight);
+  }, 5); 
 }
