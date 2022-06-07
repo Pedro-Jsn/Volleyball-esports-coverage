@@ -273,3 +273,15 @@ INSERT INTO Partida
     ,(null, 'Pendente', '2022-06-08 03:13:00', 2, 9)
     ,(null, 'Pendente', '2022-06-07 18:34:00', 4, 1)
     ,(null, 'Pendente', '2022-06-08 00:37:00', 2, 5);
+
+-- usuarios --
+INSERT INTO Usuario(idUsuario,nome,email,senha) VALUES (1,'Gustavo Antonio','gustavo12.0000@gmail.com',1234567890);
+INSERT INTO Usuario(idUsuario,nome,email,senha) VALUES (2,'Vinícius da Silva Sousa','vini@email.com',12345);
+INSERT INTO Usuario(idUsuario,nome,email,senha) VALUES (3,'Gabriel Duarte','gabrielmiguel656@gmail.com',123456);
+INSERT INTO Usuario(idUsuario,nome,email,senha) VALUES (4,'João Theodoro','theodoro@gmail.com',1234567);
+
+-- posts --
+INSERT INTO Post(idPost,fkUsuario,titulo,descPost) VALUES (1,1,'Muito bom este site','Eu sou um grande fã deste esporte e por muito tempo senti falta de um site que tivesse as informações necessárias');
+INSERT INTO Post(idPost,fkUsuario,titulo,descPost) VALUES (2,2,'BRASIL DESTRÓI TODO MUNDO','Lucarelli é um excelente jogador e o time inteiro é muito forte (com exceção do Thales)');
+INSERT INTO Post(idPost,fkUsuario,titulo,descPost) VALUES (3,3,'EU sou o mais brabo do Volei','Ganhei 900 medalhas nos últimos 3 meses! Duvida? Vem x1!');
+INSERT INTO Post(idPost,fkUsuario,titulo,descPost) VALUES (4,4,'Brasil x Ukraine','O jogo de brasil x ukraine foi sensacional, um espetaculo para ambas as partes do esporte que 3 a 2 maravilhoso de se assistir.');
