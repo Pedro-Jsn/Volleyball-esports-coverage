@@ -129,7 +129,8 @@ main .container-time .form-time{
   align-items: center;
   margin-top: 20px;
   width: 90%;
-  height: 50vh;
+  height: 80%;
+  padding: 50px 50px 50px 50px;
   background-color: var(--card-color);
   box-shadow: rgb(0 0 0 / 60%) 0 0 2px;
 }
