@@ -167,7 +167,7 @@ function renderizarGrafico2(resultado){
   const data = {
     labels: labels,
     datasets: [{
-      label: 'My First dataset',
+      label: '',
       backgroundColor: 'rgba(208, 229, 240, 0.4)',
       borderColor: 'rgb(156, 203, 226)',
       data: [],

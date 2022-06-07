@@ -54,75 +54,198 @@
         </div>
       </div>
       <div class="content-2">
-        <div class="option active">
+        <div class="option active" id="time" onclick="time()">
           <span>Time</span>
         </div>
-        <div class="option">
+        <div class="option" id="partida" onclick="partida()">
           <span>Partida</span>
         </div>
-        <div class="option">
+        <div class="option" id="premiacao" onclick="premiacao()">
           <span>Premiação</span>
         </div>
       </div>
 
-      <div class="container-time" style="display: none;">
+      <div class="container-time" id="container-time">
         <div class="title">
           Cadastre o seu time aqui!
         </div>
 
         <div class="form-time">
-          <div class="nome-time">
-            <label>Nome do time:</label>
-            <input type="text">
-            <br>
-            <label>Sigla do time:</label>
-            <input type="text">
+          <div class="col-1">
+            <div class="nome-time" id="inicio">
+              <div class="valor">
+                <input type="text" class="ipt_valor" id="ipt_nomeTime">
+                <label class="label_valor">Nome do time:</label>
+              </div>
+              <div class="valor">
+                <input type="text" class="ipt_valor" id="ipt_sigla" max="3">
+                <label class="label_valor">Sigla do time:</label>
+              </div>
+            </div>
+            <div class="jogadores" id="jogadores">
+              <div class="valor">
+                <input type="text" class="ipt_valor" id="ipt_jogador1">
+                <label class="label_valor">Nome do 1°Jogador:</label>
+              </div>
+              <div class="valor">
+                <input type="text" class="ipt_valor" id="ipt_jogador2">
+                <label class="label_valor">Nome do 2°Jogador:</label>
+              </div>
+              <div class="valor">
+                <input type="text" class="ipt_valor" id="ipt_jogador3">
+                <label class="label_valor">Nome do 3°Jogador:</label>
+              </div>
+              <div class="valor">
+                <input type="text" class="ipt_valor" id="ipt_jogador4">
+                <label class="label_valor">Nome do 4°Jogador:</label>
+              </div>
+              <div class="valor">
+                <input type="text" class="ipt_valor" id="ipt_jogador5">
+                <label class="label_valor">Nome do 5°Jogador:</label>
+              </div>
+              <div class="valor">
+                <input type="text" class="ipt_valor" id="ipt_jogador6">
+                <label class="label_valor">Nome do 6°Jogador:</label>
+              </div>
+            </div>
+            <div class="jogadores" id="final" style="display: none;">
+              <div class="valor">
+                <input type="text" class="ipt_valor" id="ipt_treinador">
+                <label class="label_valor">Nome do treinador:</label>
+              </div>
+              <div class="valor">
+                <input type="number" class="ipt_valor" id="ipt_pontuacao_time">
+                <label class="label_valor">Pontuação do time:</label>
+              </div>
+            </div>
+            <div class="container-login100-form-btn">
+              <button class="login100-form-btn" id="btn_time" onclick="continuar()">
+                Continuar
+              </button>
+            </div>
           </div>
-          <div class="jogadores">
-            <label>Nome do 1°Jogador:</label>
-            <input type="text">
-            <label>Nome do 2°Jogador:</label>
-            <input type="text">
-            <label>Nome do 3°Jogador:</label>
-            <input type="text">
-            <label>Nome do 4°Jogador:</label>
-            <input type="text">
-            <label>Nome do 5°Jogador:</label>
-            <input type="text">
-          </div>
-          <div class="container-login100-form-btn">
-            <button class="login100-form-btn">
-              Cadastrar
-            </button>
-          </div>
-
         </div>
       </div>
 
-      <div class="container-time" >
+      <div class="container-partida" id="container-partida">
         <div class="title">
-          Cadastre uma partida aqui!
+          Cadastre a sua partida aqui!
         </div>
 
-        <div class="form-time">
-          <div class="nome-time">
-            <label>Nome do time:</label>
-            <input type="text">
-            <br>
-            <label>Sigla do time:</label>
-            <input type="text">
-          </div>
-          
-          <div class="container-login100-form-btn">
-            <button class="login100-form-btn">
-              Cadastrar
-            </button>
+        <div class="form-partida">
+          <div class="selecao_time">
+            <div class="col-1">
+              <h1 class="title">Selecione o 1°Time:</h1>
+
+              <div class="select">
+                <select id="slc_time1_partida" onchange="selecionarPtime()">
+                  <option selected disabled>Selecione um time</option>
+                </select>
+              </div>
+              <div class="dados_time">
+                <label>Time: <span id="nomeTime1"></span></label>
+                <label>Sigla: <span id="siglaTime1"></span></label>
+              </div>
+            </div>
+
+            <div class="col-2">
+              <h1 class="title">Selecione o 2°Time:</h1>
+
+              <div class="select">
+                <select id="slc_time2_partida" onchange="selecionarStime()">
+                  <option selected disabled>Selecione um time</option>
+                </select>
+              </div>
+              <div class="dados_time">
+                <label>Time: <span id="nomeTime2"></span></label>
+                <label>Sigla: <span id="siglaTime2"></span></label>
+              </div>
+            </div>
           </div>
 
+          <div class="col-3">
+            <div class="data">
+              <input type="datetime-local" id="ipt_data_partida">
+            </div>
+
+            <div class="container-login100-form-btn">
+              <button class="login100-form-btn" onclick="cadastrarPartida()">
+                Cadastrar partida
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-premiacao" id="container-premiacao">
+        <div class="title">
+          Cadastre a sua premiação ou uma nova pontuação para algum time.
+        </div>
+
+        <div class="form-premiacao">
+          <div class="col-1">
+            <h1 class="title">Premiação:</h1>
+
+            <div class="select">
+              <select id="slc_time_premiacao" onchange="listarTimePremiacao()">
+                <option selected disabled>Selecione um time</option>
+              </select>
+            </div>
+            <div class="dados_time">
+              <label>Time: <span id="nomeTime_premiacao"></span></label>
+              <label>Sigla: <span id="siglaTime_premiacao"></span></label>
+            </div>
+
+            <div class="data">
+              <input type="datetime-local" id="ipt_data_premiacao">
+            </div>
+
+            <div class="valor">
+              <input type="number" class="ipt_valor" id="ipt_valor_premiacao">
+              <label class="label_valor">Valor:</label>
+            </div>
+
+            <div class="container-login100-form-btn">
+              <button class="login100-form-btn" onclick="cadastrarPremiacao()">
+                Cadastrar premiação
+              </button>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <h1 class="title">Pontuação do time:</h1>
+
+            <div class="select">
+              <select id="slc_time_pontuacao" onchange="listarTimePontuacao()">
+                <option selected disabled>Selecione um time</option>
+              </select>
+            </div>
+            <div class="dados_time">
+              <label>Time: <span id="nomeTime_pontuacao"></span></label>
+              <label>Sigla: <span id="siglaTime_pontuacao"></span></label>
+            </div>
+
+            <div class="data">
+              <input type="datetime-local" id="ipt_data_pontuacao">
+            </div>
+
+            <div class="valor">
+              <input type="number" class="ipt_valor" id="ipt_pontuacao">
+              <label class="label_valor">Pontuação:</label>
+            </div>
+
+            <div class="container-login100-form-btn">
+              <button class="login100-form-btn" onclick="cadastrarPontuacao()">
+                Cadastrar pontuação
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </main>
 </body>
+<script src="../assets/js/admin.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </html>

@@ -17,6 +17,26 @@ function listarPremiacoes(req, res){
     });
 }
 
+function cadastrarPremiacao(req, res){
+  var idTime = req.body.idTimeServer;
+  var valor = req.body.valorServer;
+  var data = req.body.dataServer;
+
+  premiacaoModel.cadastrarPremiacao(valor, idTime, data).then(
+    function(resultado){
+        res.status(200).json(resultado);
+    }).catch(
+    function(erro){
+      console.log(erro);
+      console.log(
+        "\nHouve um erro ao cadastrar a premiação! Erro: ",
+        erro.sqlMessage
+      );
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
 module.exports = {
-  listarPremiacoes
+  listarPremiacoes,
+  cadastrarPremiacao
 }

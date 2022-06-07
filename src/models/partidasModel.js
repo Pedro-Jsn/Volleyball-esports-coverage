@@ -20,7 +20,15 @@ function listarPartidas(){
   return database.executar(instrucao);
 }
 
+function cadastrarPartida(horario, primeiroTime, segundoTime){
+  var instrucao = `INSERT INTO partida (statusPartida, horario, primeiroTime, segundoTime) VALUES ('Pendente', '${horario}', ${primeiroTime}, ${segundoTime});`;
+
+  return database.executar(instrucao);
+}
+  
+
 module.exports = {
   listarPartidasHome,
-  listarPartidas
+  listarPartidas,
+  cadastrarPartida
 }

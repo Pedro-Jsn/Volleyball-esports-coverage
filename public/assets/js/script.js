@@ -28,7 +28,7 @@ function validarSessao(){
     if (sessionStorage.ID_USUARIO == null) {
         window.location.href = "../login.html";
     }else{
-        validaLogin();
+        aparecerSaida();
     }
 }
 
@@ -43,5 +43,20 @@ function validaLogin(){
         <a href="./admin/perfil.html"><span class="text">Perfil</span></a>
         <i class="fa-regular fa-user"></i>`;
     }
+}
+
+function aparecerSaida(){
+    var sessao = document.getElementById("sign-in");
+        
+    sessao.innerHTML = `
+        <a onclick="sairPerfil()"><span class="text">Sair</span></a>
+        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+    `;
+    
+}
+
+function sairPerfil(){
+    sessionStorage.clear();
+    window.location.href = "../index.html";
 }
 

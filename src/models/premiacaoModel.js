@@ -9,6 +9,16 @@ function listarPremiacoes(idTime){
   return database.executar(instrucao);
 }
 
+function cadastrarPremiacao(valor, idTime, data){
+  var instrucao = `
+    INSERT INTO premiacao (valor, fkTime, momento)
+    VALUES (${valor}, ${idTime}, '${data}');
+  `;
+
+  return database.executar(instrucao);
+}
+
 module.exports = {
-  listarPremiacoes
+  listarPremiacoes,
+  cadastrarPremiacao
 }

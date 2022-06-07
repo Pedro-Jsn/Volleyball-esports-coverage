@@ -19,4 +19,20 @@ router.get("/listarEstatisticas/:idTime", function(req, res){
   timesController.estatisticaTime(req, res);
 });
 
+router.get("/listarAdmin", function(req, res){
+  timesController.listarAdmin(req, res);
+});
+
+router.get("/listarAdminTime/:idTime", function(req, res){
+  timesController.listarAdminTime(req, res);
+});
+
+router.post("/cadastrarTime", function(req, res){
+  timesController.cadastrarTime(req, res);
+});
+
+router.put("/atualizarPontuacao/:idTime", function(req,res){
+  timesController.atualizarPontuacao(req, res);
+});
+
 module.exports = router;

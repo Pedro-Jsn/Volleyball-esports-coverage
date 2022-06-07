@@ -11,4 +11,8 @@ router.get("/listarPartidas", function(req, res){
   partidasController.listarPartidas(req, res);
 });
 
+router.post("/cadastrarPartida", function(req, res){
+  partidasController.cadastrarPartida(req, res);
+});
+
 module.exports = router;

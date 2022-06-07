@@ -22,8 +22,17 @@ function obterDadosGrafico2(idTime){
   return database.executar(instrucao);
 }
 
+function atualizarPontuacao(pontuacao, data, idTime){
+  var instrucao = `
+  INSERT INTO historico (pontuacao, momento, fkTime) VALUES (${pontuacao}, '${data}', ${idTime});
+  `;
+
+  return database.executar(instrucao);
+}
+
 module.exports = {
   obterDadosGrafico,
   obterDadosGrafico2,
-  mudarIdioma
+  mudarIdioma,
+  atualizarPontuacao
 }
