@@ -7,6 +7,7 @@ Um portal de vôlei para as pessoas se conectarem ou divulgarem suas partidas, c
 ## :eyes: Referência de 
 
  - [Hltv.org](https://www.hltv.org/)
+ - [Vlr](https://www.vlr.gg/)
  
 
 
